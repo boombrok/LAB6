@@ -33,8 +33,13 @@ public class StudentView {
 
     public void displayStudents(String title, List<Student> students) {
         System.out.println("\n=== " + title + " ===");
-        if (students.isEmpty()) System.out.println("Результатів немає.");
-        else students.forEach(System.out::println);
+        if (students.isEmpty()) {
+            System.out.println("Результатів немає.");
+        } else {
+            for (Student s : students) {
+                System.out.println(s);
+            }
+        }
     }
 
     public void displayFacultyGrouped(Map<String, List<Student>> map) {
